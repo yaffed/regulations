@@ -323,7 +323,7 @@ $(function(){
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
           alert('Form Submitted')
         } else {
-          alert('Error submitting form. Please try again later.')
+          alert('Error submitting form. Please click ok to try again.')
         }
         return;
     };
