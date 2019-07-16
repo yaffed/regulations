@@ -290,7 +290,6 @@ $(function(){
     formData.formGoogleSend
       = form.dataset.email || ""; // no email by default
 
-    console.log(formData);
     return {data: formData, honeypot};
   }
 
@@ -312,8 +311,6 @@ $(function(){
     // xhr.withCredentials = true;
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
-        console.log(xhr.status, xhr.statusText);
-        console.log(xhr.responseText);
         form.reset();
         var formElements = form.querySelector(".form-elements")
         if (formElements) {
@@ -322,6 +319,11 @@ $(function(){
         var thankYouMessage = form.querySelector(".thankyou_message");
         if (thankYouMessage) {
           thankYouMessage.style.display = "block";
+        }
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+          alert('Form Submitted')
+        } else {
+          alert('Error submitting form. Please try again later.')
         }
         return;
     };
@@ -363,3 +365,61 @@ $(document).ready(function(){
     });
     
 
+/*thank you page
+
+$(function(){
+  document
+      .getElementById("myBtn")
+      .addEventListener("click", function(){
+      redirect(this.getAttribute("data-page"));        
+  });
+  
+  $('button:nth-child(1)')
+      .click(function(){
+      redirect($(this).attr('data-page'));
+  });
+})
+
+function redirect(url){
+  console.log(url);
+  window.location = url;
+}*/
+
+
+//thank you redirect
+
+// function pageRedirect() {
+//   window.location.href = "thankyou.html";
+// }
+
+// function submitForm() {
+//   $("#supportersFrm").submit(function() {
+//     alert('submitted')
+//   })
+// }
+
+// $(document).ready(function) {
+//   $('.send.beep').click(function) {
+//     alert('test')
+//   }
+// }
+
+// let supportersForm =;
+
+// $(document).ready(function() {
+//   $("#supportersFrm").submit(function() {
+//     alert('test')
+//   })
+// })
+
+// $("#supportersFrm").submit(function( event ) {
+//   alert( "Handler for .submit() called." );
+//   event.preventDefault();
+// });
+
+// $(document).ready(function() {
+//   $( "#supportersFrm" ).submit(function( event ) {
+//     alert( "Handler for .submit() called." );
+//     event.preventDefault();
+//   });
+// })
