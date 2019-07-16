@@ -7,23 +7,12 @@ $color-darkorange:#cf4800;
  {
    width:150px;
  }
- /*
-@keyframes bounce {
-	0%,
-	20%,
-	50%,
-	80%,
-	100% {
-		transform: translateY(0);
-	}
-	40% {
-		transform: translateY(-10px);
-	}
-	60% {
-		transform: translateY(-5px);
-	}
-}
 
+ html,body,div,form,fieldset,legend,label{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}th,td{text-align:left;vertical-align:top;}h1,h2,h3,h4,h5,h6,th,td,caption{font-weight:normal;}img{border:0;}
+
+input.image {background: url(/image/whitepencil.svg) no-repeat;
+	cursor:pointer;
+	border: none;}
 /*General Styles*/
 
 body {
@@ -918,7 +907,7 @@ img.socialmedia {max-width:3vw;display:inline-block;margin-right:.5vw;margin-lef
 
 .socialmedia {margin-left:auto;margin-right:auto;text-align:center;grid-row:4/5;}
 
-.share {margin-left:auto;margin-right:auto;margin-bottom:5vw;text-align:center}
+.share {margin-left:auto;margin-right:auto;margin-bottom:5vw;text-align:center;margin-top: 7vw;}
 
 section.graphics {grid-row:4/5;display:grid;grid-template-columns: 1fr 1fr;margin-top: 23vw;margin-left:auto;margin-right:auto;grid-template-rows:1fr 1fr;text-align:center;width:60vw;grid-gap:4vw;}
 
@@ -1071,14 +1060,15 @@ h3.sendaletter {font-size:2.5em;text-align:center;color:$color-brightblue;    ma
 .sendaletterinstructions {border-top:1px lightgrey solid;margin-top:5vw;}
 
 button.btn__letter {	background-color: #FF6700;
-	padding: 13px 30px;
+	//padding: 13px 30px;
 	font-size: 1.05em;
 	text-transform: uppercase;
 	text-decoration: none;
 	color:white;
 	transition: .3s ease;
 	border:none;
-margin:1vw;padding:12px;margin:0;margin-right:2vw;transition:background-color .3s;margin-top:3vw;}
+margin:1vw;padding:12px;margin:0;margin-right:2vw;transition:background-color .3s;margin-top:3vw;
+}
 	
 button.btn__letter:hover {cursor: pointer;background-color:$color-darkorange;}
 
@@ -1104,10 +1094,10 @@ button.send {margin-top:5vw;text-align:center;background-color: #FF6700;
 	color:white;
 	transition: .3s ease;
 	border:none;
-margin:1vw;padding:12px;margin:0;margin-right:2vw;transition:background-color .3s;margin-top:-8.5vw;}
+margin:1vw;padding:12px;margin:0;margin-right:2vw;transition:background-color .3s;}
 
-.btn__form-grp {text-align:center;margin-top:2vw;}
-
+.btn__form-grp {text-align:center;margin:0;padding:0;}
+a {display:in}
 button.send:hover {cursor: pointer;background-color:$color-darkorange;}
 
 .didyouknow {margin-bottom: -20vw;border-top:1px lightgrey solid;}
@@ -1124,9 +1114,9 @@ section.buttons {padding:0;margin:0;margin-top:3vw;}
 
 p.furthersendinstructions {max-width:40%;margin-left:auto;margin-right:auto;margin-top:2vw;}
 
-a.send:hover {background-color:white;}
 
-a.send {text-align:center;}
+
+a.send {text-align:center;margin:0;padding:0;}
 
 //tabs//
 
@@ -1217,13 +1207,13 @@ input.btn__letter:hover {cursor: pointer;background-color:$color-darkorange;}
 
 textarea { 
 	width:100%;
-	height: 100vh;resize: none;
+	height: 45vw;resize: none;
 	outline:none;
 	border:none;
 	font-size:100%;
 	}
 
-	textarea.writeyourown {width:100%;height:40vw;border-radius: 0;}
+	textarea.writeyourown {width:100%;max-height:15vw;border-radius: 0;}
 
    textarea:focus {outline: blue;}
    textarea:hover {outline: blue;}
@@ -1232,7 +1222,8 @@ textarea {
 		//border:1px grey solid;padding-right:1vw;
 	}
 
-	button.makeEditable {margin:0;padding:0;font-size:1.25em;}
+	input.makeEditable {margin:0;padding:0;font-size:1.25em;height: 4vw;
+		width: 4vw;}
 
 	span.required {
 		color: red;
@@ -1244,13 +1235,27 @@ textarea {
 
 #writeyourown {border:1px grey solid; padding-left:1vw;padding-top:1vw;}
 
-button.send {grid-column: 2/3;}
+button.send {grid-column: 1/2;grid-row:1/2;}
 	
 p.edit-instructions {margin-top:-7vw;;margin-left:10vw;color:grey;}
 
 textarea.letter__text {min-width:100%;min-height:60vh;}
 
-input.comment {min-width:100%;min-height:100vh;}
+button.makeEditable {width:4vw;height:4vw;}
+
+img.pencil {max-width:1.75vw;
+	margin-left:-3.1vw;
+	margin-bottom:.6vw;cursor: pointer;}
+
+button.thankyou {margin-right:20vw;}
+
+.send__button {background-color:#FF6700; color:white;width:50%;}
+
+.textbox {margin-top:6vw;}
+
+
+//a.send {margin-left:15vw;}
+////////
 
 @media only screen and (max-width: 600px) {
 	body {display:block;}
@@ -1287,5 +1292,10 @@ input.comment {min-width:100%;min-height:100vh;}
 
 input.form-box {min-width: 100vw;margin:0;padding:0;}
 	
+p.graphics {min-width:100%;text-align:center;margin-bottom:7vw;border-top:2px lightgrey dotted;font-size:1.1em;padding:5vw;}
+img.graphics {max-width:100%;margin-bottom:3vw;}
+img.small {margin-top:15vw;margin-bottom:10vw;margin-left:3vw;margin-right:10vw;}
+img.large {min-width:30vw;}
 
 }
+
