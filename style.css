@@ -1228,7 +1228,7 @@ h3.sendaletter {
 button.btn__letter {
   background-color: #FF6700;
   font-size: 1.05em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-decoration: none;
   color: white;
   -webkit-transition: .3s ease;
@@ -1282,23 +1282,18 @@ button.btn__changetemplate {
 }
 
 button.send {
-  margin-top: 5vw;
   text-align: center;
   background-color: #FF6700;
-  padding: 13px 30px;
-  font-size: 1.25em;
+  font-size: 1.5em;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
   border: none;
-  margin: 1vw;
   padding: 12px;
-  margin: 0;
-  margin-right: 2vw;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
+  padding-left: 30px;
+  padding-right: 30px;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
 }
 
 .btn__form-grp {
@@ -1506,6 +1501,7 @@ textarea.letter__text {
 button.makeEditable {
   width: 4vw;
   height: 4vw;
+  text-transform: capitalize;
 }
 
 img.pencil {
