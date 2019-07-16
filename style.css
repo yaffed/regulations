@@ -1664,5 +1664,9 @@ button.thankyou {
   img.large {
     min-width: 30vw;
   }
+  input.mq {
+    width: 100px;
+    height: 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
