@@ -17,7 +17,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" type="text/css" href="https://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="script.js"></script>
@@ -103,7 +103,7 @@
                     </div>
                     
                     <div class="emailphone">
-                        <div class="form-grp"><label for="email"><p>Email <span class="required">*</span></p></label><input id="email" type="email" required /></div>
+                        <div class="form-grp"><label for="email"><p>Email <span class="required">*</span></p></label><input id="email" type="email" name="email" required /></div>
 
                         
 
@@ -125,10 +125,7 @@
                         
                     
                 </fieldset></form>
-                <!--<br/>
-                <a class="button btn_send_email" href="javascript:void(0);" id="btnQuickSubmitEmail"><span class="loading"><img src="logo.svg"> Sending</span><span class="loaded">Send an Email Using Template</span></a>&nbsp;
-                <a class="button show-letter show-popup-writeyourown" href="#letterText">Show Letter Template</a>
-                <a class="button show-letter show-popup-writeyourown" href="#letterText">Write Your Own</a>-->
+                
             </div>
             
         
@@ -144,23 +141,19 @@
                             <li><a class="btn__changetemplate" href="#writeyourown"><button class="btn__changetemplate">Write Your Own</button></a></li>
                           </ul></div>
 
-                    <!--<a class="btn__changetemplate"><button class="btn__changetemplate">Yeshiva Grads</button>
-                    </a>
-                    <a class="btn__changetemplate"><button class="btn__changetemplate">Yeshiva Parents</button>
-                    </a>
-                    <a class="btn__changetemplate"><button class="btn__changetemplate">General Public</button>
-                    </a></div>
-        <h3 class="instructions">Send this letter, edit it, or write your own</h3
-
-    <div contenteditable="true">>-->
+                    
             
            
-        <form id="supportersFrm" name="supportersFrm" action="https://script.google.com/a/yaffed.org/macros/s/AKfycbw870MN03cE9sbeQYnpGV7ZSneDBTedzen5AlQUgw/exec" method="post" data-email="fcohen@yaffed.org" class="form-horizontal gform">
+        <form id="supportersFrm" name="supportersFrm" action="https://script.google.com/macros/s/AKfycbz0ksBA7JTZ6m5fzFONhy01VmypQ-agZAhOz6Ka7HtgIvsj0dFj/exec" method="post" data-email="fcohen@yaffed.org" class="form-horizontal gform">
+
+
             <fieldset>  
             <div id="general-public" class="tab_content">
                     <div class="form-grp__edit">
                         
-                            <input type="button" value="Edit" class="makeEditable btn__letter">
+                            <input type="button" class="makeEditable btn__letter">
+
+                            <img class="pencil" src="whitepencil.svg">
                             
                             <p class="letter__text">
 
@@ -170,14 +163,17 @@ The State Education Department is taking an important step by issuing these regu
                                         
 As a resident of New York State, I was alarmed to learn the state’s substantial equivalency law had gone unenforced for so long. In recent years, there have been dozens of reports in the press and from former graduates with credible allegations of educational neglect in Hasidic and ultra-Orthodox yeshivas. Many of these yeshivas receive public funding, including from the tax dollars we send to New York State. Unless the state steps in, the public will be complicit in denying thousands of children in these schools the education to which they are entitled under the law. Worst of all, these children will pay the heavy social, economic, and emotional price of being denied an education.
                                         
-This priority can’t be delayed any longer. Indeed, the state should strengthen and clarify these regulations so that no child falls through the cracks. The state must make sure that every child in every school is learning English, math, social studies, science, and all other subjects required by law.
-                                        </textarea></p>
-<div class="btn__form-grp"><a class="send"><button class="send beep">Send</button></a></div>
+This priority can’t be delayed any longer. Indeed, the state should strengthen and clarify these regulations so that no child falls through the cracks. The state must make sure that every child in every school is learning English, math, social studies, science, and all other subjects required by law.</textarea></p>
+                                        <div class="btn__form-grp">
+                                            <a class="send"> <button class="send beep" type="submit" name="send" >Send</button></a></div> 
                                 
                                 </div></div>
 
     <div id="yeshiva-grads" class="tab_content">
-            <div class="form-grp__edit"><input type="button" value="Edit" class="makeEditable btn__letter">
+            <div class="form-grp__edit">
+                <input type="button" class="makeEditable btn__letter">
+
+                            <img class="pencil" src="whitepencil.svg">
                 <p class="letter__text">
 
                     <textarea id="letter__grads" readonly> I am writing to express my strong support for greater oversight and enforcement of substantial equivalency regulations in nonpublic schools, especially Yeshivas like the one I attended.
@@ -186,17 +182,19 @@ The New York State Education Department is taking an important step by issuing t
                         
 This priority can’t be delayed any longer. Indeed, the state should strengthen and clarify these regulations so that no child falls through the cracks. The state must make sure that every child in every school is learning English, math, social studies, science, and all other subjects required by law. 
                         
-I speak from experience: this is not a problem that can be solved internally without state and local enforcement and oversight. There are thousands of children currently in Hasidic Yeshivas who are receiving little to no secular education. Unless the state steps in and enforces the substantial equivalency law, our children, families, friends, and neighbors will pay a heavy price.
-                        </textarea></p>
+I speak from experience: this is not a problem that can be solved internally without state and local enforcement and oversight. There are thousands of children currently in Hasidic Yeshivas who are receiving little to no secular education. Unless the state steps in and enforces the substantial equivalency law, our children, families, friends, and neighbors will pay a heavy price.</textarea></p>
                         
                         
-<div class="btn__form-grp"><a href="thankyou.html" class="send"><button class="send beep">Send</button></a></div>
+                        <div class="btn__form-grp">
+                            <a class="send"> <button class="send beep" type="button" name="send" onclick="submitForm()">Send</button></a></div> 
                         
                     </div></div>
 
                 <div id="yeshiva-parents" class="tab_content">
                         <div class="form-grp__edit">
-                                <input type="button" value="Edit" class="makeEditable btn__letter">
+                                <input type="button" class="makeEditable btn__letter">
+
+                            <img class="pencil" src="whitepencil.svg">
                                 
                                 <p class="letter__text">
 
@@ -208,14 +206,21 @@ This priority can’t be delayed any longer. Indeed, the state should strengthen
                                     
 I speak from experience: this is not a problem that can be solved internally without state and local enforcement and oversight. There are thousands of children currently in Hasidic Yeshivas who are receiving little to no secular education. Unless the state steps in and enforces the substantial equivalency law, our children, families, friends, and neighbors will pay a heavy price. </textarea></p> 
 
-<div class="btn__form-grp"><a class="send"><button class="send beep">Send</button></a></div>          
+<div class="btn__form-grp">
+    <a class="send"> <button class="send beep" type="button" name="send" onclick="submitForm()">Send</button></a></div> 
+            
                        </div></div>
 
             <div id="writeyourown" class="tab_content form-grp__edit">
                             <p class="letter__text">
-                            <div class="form-grp__edit"><textarea id="letter" class="writeyourown" placeholder="Type something here"></textarea></div></div>
+                            <div class="form-grp__edit"><textarea id="letter" class="writeyourown" placeholder="Type something here"></textarea></p>
+                                <div class="btn__form-grp textbox">
+                                    <a class="send"><button class="send beep" type="submit" name="send" >Send</button></a></div>
+                                
+                                 </div></div>
 
-                          </fieldset>  </form>
+                           </fieldset> </form>
+                           
                                                 <section class="share">
                                                         <h3 class="heading-text-center">Share</h3>
                                                         <div class="socialmedia">
